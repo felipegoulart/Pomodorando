@@ -1,0 +1,125 @@
+:root {
+    --fundo-primaria: #21282d;
+    --fundo-secundaria: #cde8f7;
+    --texto-primario: #363c3f;
+    --texto-secundario: #6b777c;
+    --destaque: #f48619;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--fundo-primaria);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25vh 60vh 15vh;
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #tempo, #atividades, #menu {
+        grid-column: 2;
+    }
+}
+
+#tempo {
+    display: flex;
+    flex-wrap: wrap;
+    /* position: relative; */
+    grid-row: 1;
+    justify-content: center;
+}
+
+
+#contador {
+    display: block;
+    /* position: absolute; */
+    color: var(--destaque);
+    font-size: 60pt;
+    /* top: -8px; */
+}
+
+#barra-progresso-fundo {
+    display: block;
+    position: relative;
+    margin-top: -10px;
+    background-color: var(--fundo-secundaria);
+    height: 10px;
+    width: 90%;
+    border-radius: 7px;
+}
+
+#barra-progresso {
+    display: block;
+    position: absolute;
+    background-color: var(--destaque);
+    height: 10px;
+    width: 30%;
+    border-radius: 7px;
+}
+
+#botoes {
+    display: block;
+}
+
+button {
+    display: flex;
+    position: relative;
+    margin: 5px;
+    
+    width: 30px;
+    height: 30px;
+
+    border-radius: 100%;
+    border-color: transparent;
+    background-color: var(--fundo-secundaria);
+
+    justify-content: center;
+    align-items: center;
+}
+
+#stop {
+    position: absolute;
+    background-color: var(--texto-primario);
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+}
+
+#play {
+    box-sizing: border-box;
+   
+    width: 15px;
+    height: 15px;
+   
+    border-left: 15px solid var(--texto-primario);
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+
+    border-radius: 3px;
+    
+}
+
+#atividades {
+    background-color: antiquewhite;
+    grid-row: 2;
+}
+
+
+#menu {
+    background-color: aqua;
+    grid-row: 3;
+}
