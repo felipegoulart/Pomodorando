@@ -6,6 +6,8 @@
     --destaque: #f48619;
 }
 
+/* Tratamento Geral */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +17,8 @@
 h1, h2, h3, p {
     font-family: 'Nunito', sans-serif;
 }
+
+/* Ajuste de Grid e Responsividades */
 
 .container {
     width: 100vw;
@@ -34,6 +38,8 @@ h1, h2, h3, p {
         grid-column: 2;
     }
 }
+
+/* Estilização da área do temporizador */
 
 #tempo {
     display: flex;
@@ -71,12 +77,15 @@ h1, h2, h3, p {
     border-radius: 7px;
 }
 
+/* Botões do Temporizador*/
+
 #botoes {
     display: block;
+    text-align: center;
 }
 
 button {
-    display: flex;
+    display: inline;
     position: relative;
     margin: 5px;
     
@@ -91,12 +100,20 @@ button {
     align-items: center;
 }
 
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    background-color: var(--fundo-primaria);
+}
+
 #stop {
-    position: absolute;
     background-color: var(--texto-primario);
     width: 15px;
     height: 15px;
     border-radius: 2px;
+    margin: 0 auto;
 }
 
 #play {
@@ -106,20 +123,31 @@ button {
     height: 15px;
    
     border-left: 15px solid var(--texto-primario);
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
 
     border-radius: 3px;
-    
+
+    margin: 0 auto 0 7px;
 }
 
+button:hover > #stop{
+    background-color: var(--fundo-secundaria);
+}
+
+button:hover > #play {
+    border-left-color: var(--fundo-secundaria);
+}
+
+/* Atividades */
+
 #atividades {
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     grid-row: 2;
 }
 
 
 #menu {
-    background-color: aqua;
+    /* background-color: aqua; */
     grid-row: 3;
 }
