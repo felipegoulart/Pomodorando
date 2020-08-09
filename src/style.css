@@ -42,7 +42,7 @@ h3 {
     grid-template-rows: 27vh 60vh 13vh;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 915px) {
     .container {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -59,7 +59,7 @@ h3 {
 #tempo {
     display: flex;
     flex-wrap: wrap;
-    /* position: relative; */
+    position: relative;
     grid-row: 1;
     justify-content: center;
 }
@@ -75,7 +75,7 @@ h3 {
 #barra-progresso-fundo {
     display: block;
     position: relative;
-    margin-top: -10px;
+    margin-top: -37px;
     background-color: var(--fundo-secundaria);
     height: 10px;
     width: 90%;
@@ -96,13 +96,14 @@ h3 {
 
 #botoes {
     display: block;
+    position: absolute;
+    bottom: 10px;
     text-align: center;
     margin-top: 15px;
 }
 
 #botoes button {
     display: inline-block;
-    position: relative;
     width: 30px;
     height: 30px;
     margin-left: 5px;
