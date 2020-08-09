@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
-    <script src="src/script.js"></script>
+    <script src="src/paginacao.js" defer></script>
+    <script src="src/data.js" defer></script>
     <title>Pomodorando</title>
 </head>
 <body>
@@ -28,8 +29,7 @@
         </div>
 
         <div id="atividades">
-
-            <div id="aFazer" class="telaAtividade">
+            <div id="aFazer" class="telaAtividade hidden">
                 <h1 class="titulo">A fazer</h1>
                 <div class="cards">
                     <div class="card">
@@ -42,88 +42,38 @@
                             <h3>1/5</h3>
                         </div>
                     </div>
-                    <div class="card">
-                        <h2 class="nomeAtividade">Teste</h2>
-                        <div class="tempoTotal">
-                            <img src="./src/img/relogio.svg">
-                            <h3>120min</h3>
-                        </div>
-                        <div class="ciclos">
-                            <h3>1/5</h3>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2 class="nomeAtividade">Teste</h2>
-                        <div class="tempoTotal">
-                            <img src="./src/img/relogio.svg">
-                            <h3>120min</h3>
-                        </div>
-                        <div class="ciclos">
-                            <h3>1/5</h3>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2 class="nomeAtividade">Teste</h2>
-                        <div class="tempoTotal">
-                            <img src="./src/img/relogio.svg">
-                            <h3>120min</h3>
-                        </div>
-                        <div class="ciclos">
-                            <h3>1/5</h3>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h2 class="nomeAtividade">Teste</h2>
-                        <div class="tempoTotal">
-                            <img src="./src/img/relogio.svg">
-                            <h3>120min</h3>
-                        </div>
-                        <div class="ciclos">
-                            <h3>1/5</h3>
-                        </div>
-                    </div>
+
                 </div>
             </div>
-
-            <div id="feito" class="telaAtividade hidden"> 
+            <div id="feito" class="telaAtividade"> 
                 <h1 class="titulo">Feito</h1>
                 
                 <div class="cards">
-                    <div class="card">
-                        <h2 class="nomeAtividade">Teste</h2>
-                        <div class="tempoTotal">
-                            <img src="./src/img/relogio.svg">
-                            <h3>120min</h3>
-                        </div>
-                        <div class="ciclos">
-                            <h3>1/5</h3>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
         
         <div id="menu">
-            <button id="botaoAFazer">A fazer</button>
-            <button id="botaoAdicionar"><img src="./src/img/adicionar.svg" alt="adicionar"></button>
-            <button id="botaoFeito">Feito</button>
+            <button id="botaoAFazer" class="desativado">A fazer</button>
+            <button id="botaoAdicionar" class="desativado"><img src="./src/img/adicionar.svg" alt="adicionar"></button>
+            <button id="botaoFeito" class="desativado">Feito</button>
         </div>
     </div>
 
-    <div class="modal hidden">
+    <div id="modalAdicionar" class="modal hidden">
         <div id="telaAdicionar" class="hidden">
             <form>
                 <h1>Tarefa</h1>
                 <input id="nomeTarefa" type="text" placeholder="Nome da tarefa">
                 <h1>Duração</h1>
                 <div id="duracao">
-                    <input id="hora" type="number" min="0" placeholder="Horas">
+                    <input id="horas" type="number" min="0" placeholder="Horas">
                     <p>:</p>
-                    <input id="minuto" type="number" min="0" max="59" placeholder="Minutos">
+                    <input id="minutos" type="number" min="0" max="59" placeholder="Minutos">
                 </div>
                 <div>
-                    <button id="cancelar">Cancelar</button>
-                    <button id="adicionar">Adicionar</button>
+                    <button type="button" id="cancelar">Cancelar</button>
+                    <button type="button" id="adicionar">Adicionar</button>
                 </div>
             </form>
         </div>
