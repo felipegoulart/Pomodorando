@@ -1,13 +1,14 @@
 :root {
     --fundo-primaria: #21282d;
     --fundo-secundaria: #cde8f7;
+    
     --texto-primario: #363c3f;
     --texto-secundario: #6b777c;
+    
     --destaque: #f48619;
 }
 
 /* Tratamento Geral */
-
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +16,15 @@
 }
 
 h1, h2, h3, p {
-    font-family: 'Nunito', sans-serif;
+    font-family: Nunito, sans-serif;
+}
+
+h2 {
+    font-size: 15pt;
+}
+
+h3 {
+    font-size: 10pt;
 }
 
 /* Ajuste de Grid e Responsividades */
@@ -26,7 +35,7 @@ h1, h2, h3, p {
     background-color: var(--fundo-primaria);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 25vh 60vh 15vh;
+    grid-template-rows: 27vh 60vh 13vh;
 }
 
 @media screen and (min-width: 900px) {
@@ -54,8 +63,8 @@ h1, h2, h3, p {
     display: block;
     /* position: absolute; */
     color: var(--destaque);
-    font-size: 60pt;
-    /* top: -8px; */
+    font-size: 50pt;
+    margin-top: 20px;
 }
 
 #barra-progresso-fundo {
@@ -82,16 +91,19 @@ h1, h2, h3, p {
 #botoes {
     display: block;
     text-align: center;
+    margin-top: 15px;
 }
 
-button {
-    display: inline;
+#botoes button {
+    display: inline-block;
     position: relative;
-    margin: 5px;
     
     width: 30px;
     height: 30px;
-
+    
+    margin-left: 5px;
+    margin-right: 5px;
+    
     border-radius: 100%;
     border-color: transparent;
     background-color: var(--fundo-secundaria);
@@ -100,29 +112,29 @@ button {
     align-items: center;
 }
 
+#botoes button:hover {
+    background-color: var(--texto-primario);
+}
+
 button:focus {
     outline: none;
 }
 
-button:hover {
-    background-color: var(--fundo-primaria);
-}
-
 #stop {
-    background-color: var(--texto-primario);
-    width: 15px;
-    height: 15px;
+    background-color: var(--texto-secundario);
+    width: 13px;
+    height: 13px;
     border-radius: 2px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 #play {
     box-sizing: border-box;
    
     width: 15px;
-    height: 15px;
+    height: 17px;
    
-    border-left: 15px solid var(--texto-primario);
+    border-left: 15px solid var(--texto-secundario);
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
 
@@ -144,10 +156,115 @@ button:hover > #play {
 #atividades {
     /* background-color: antiquewhite; */
     grid-row: 2;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
+.telaAtividade {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.telaAtividade h1 {
+    color: var(--fundo-secundaria);
+    text-transform: uppercase;
+    font-size: 17pt;
+    margin-top: 30px;
+    border-bottom: 2px var(--destaque) solid;
+}
+
+.hidden {
+    display: none
+}
+
+.atividade {
+    display: block;
+    position: relative;
+
+    height: 60px;
+    min-width: 90%;
+
+    border-radius: 10px;
+    
+    background-color: var(--fundo-secundaria);
+    margin-top: 20px;
+
+    color: var(--texto-primario);
+}
+
+.atividade img {
+    width: 17px;
+}
+
+.atividade h2 {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+}
+
+.tempoTotal {
+    display: flex;
+    position: absolute;
+
+    top: 10px;
+    right: 20px;
+
+    align-content: space-around;
+}
+
+.tempoTotal h3{
+    margin-left: 5px;
+}
+
+.ciclos {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+}
 
 #menu {
     /* background-color: aqua; */
     grid-row: 3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#menu button {
+    border-color: transparent;
+    background-color: transparent;
+    position: absolute;
+
+    color: var(--texto-primario);
+    font-family: Nunito, sans-serif;
+    text-transform: uppercase;
+    font-size: 19pt;
+}
+
+#botaoAFazer {
+    left: 20px;
+    bottom: 20px;
+}
+
+#botaoAdicionar {
+    top: -10px
+}
+
+#botaoFeito {
+    right: 49px;
+    bottom: 20px;
+}
+
+#menu img {
+    width: 50px;
+}
+
+#menu button:target, #menu button:focus {
+    color: var(--destaque);
+    border-bottom: 2px var(--destaque) solid;
 }
