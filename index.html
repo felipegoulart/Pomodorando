@@ -28,21 +28,78 @@
         </div>
 
         <div id="atividades">
+
             <div id="aFazer" class="telaAtividade">
-                <h1>A fazer</h1>
-                <div class="atividade">
-                    <h2 class="nomeAtividade">Teste</h2>
-                    <div class="tempoTotal">
-                        <img src="./src/img/relogio.svg">
-                        <h3>120min</h3>
+                <h1 class="titulo">A fazer</h1>
+                <div class="cards">
+                    <div class="card">
+                        <h2 class="nomeAtividade">Teste</h2>
+                        <div class="tempoTotal">
+                            <img src="./src/img/relogio.svg">
+                            <h3>120min</h3>
+                        </div>
+                        <div class="ciclos">
+                            <h3>1/5</h3>
+                        </div>
                     </div>
-                    <div class="ciclos">
-                        <h3>1/5</h3>
+                    <div class="card">
+                        <h2 class="nomeAtividade">Teste</h2>
+                        <div class="tempoTotal">
+                            <img src="./src/img/relogio.svg">
+                            <h3>120min</h3>
+                        </div>
+                        <div class="ciclos">
+                            <h3>1/5</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="nomeAtividade">Teste</h2>
+                        <div class="tempoTotal">
+                            <img src="./src/img/relogio.svg">
+                            <h3>120min</h3>
+                        </div>
+                        <div class="ciclos">
+                            <h3>1/5</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="nomeAtividade">Teste</h2>
+                        <div class="tempoTotal">
+                            <img src="./src/img/relogio.svg">
+                            <h3>120min</h3>
+                        </div>
+                        <div class="ciclos">
+                            <h3>1/5</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="nomeAtividade">Teste</h2>
+                        <div class="tempoTotal">
+                            <img src="./src/img/relogio.svg">
+                            <h3>120min</h3>
+                        </div>
+                        <div class="ciclos">
+                            <h3>1/5</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="feito" class="telaAtividade hidden">
-                <h1>Feito</h1>
+
+            <div id="feito" class="telaAtividade hidden"> 
+                <h1 class="titulo">Feito</h1>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h2 class="nomeAtividade">Teste</h2>
+                        <div class="tempoTotal">
+                            <img src="./src/img/relogio.svg">
+                            <h3>120min</h3>
+                        </div>
+                        <div class="ciclos">
+                            <h3>1/5</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -50,6 +107,25 @@
             <button id="botaoAFazer">A fazer</button>
             <button id="botaoAdicionar"><img src="./src/img/adicionar.svg" alt="adicionar"></button>
             <button id="botaoFeito">Feito</button>
+        </div>
+    </div>
+
+    <div class="modal hidden">
+        <div id="telaAdicionar" class="hidden">
+            <form>
+                <h1>Tarefa</h1>
+                <input id="nomeTarefa" type="text" placeholder="Nome da tarefa">
+                <h1>Duração</h1>
+                <div id="duracao">
+                    <input id="hora" type="number" min="0" placeholder="Horas">
+                    <p>:</p>
+                    <input id="minuto" type="number" min="0" max="59" placeholder="Minutos">
+                </div>
+                <div>
+                    <button id="cancelar">Cancelar</button>
+                    <button id="adicionar">Adicionar</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
