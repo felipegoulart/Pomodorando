@@ -1,21 +1,16 @@
 // Helper
-const $ = document.querySelector.bind(document)
-const $all = document.querySelectorAll.bind(document)
-function log (variavel) {
-    return console.log(variavel)
-} 
 
 //Botões
-const btnAFazer = $('#botaoAFazer')
-const btnFeito = $('#botaoFeito')
-const btnAdicionar = $('#botaoAdicionar')
-const cancelar = $('#cancelar')
+const btnAFazer = document.querySelector('#botaoAFazer')
+const btnFeito = document.querySelector('#botaoFeito')
+const btnAdicionar = document.querySelector('#botaoAdicionar')
+const cancelar = document.querySelector('#cancelar')
 
 //Divs
-const divAFazer = $('#aFazer')
-const divfeito = $('#feito')
-const divfundoModal = $('#modalAdicionar')
-const divtelaModal = $('#telaAdicionar')
+const divAFazer = document.querySelector('#aFazer')
+const divfeito = document.querySelector('#feito')
+const divfundoModal = document.querySelector('#modalAdicionar')
+const divtelaModal = document.querySelector('#telaAdicionar')
 
 // Inicia a página com A Fazer ativo
 window.onload = () => {

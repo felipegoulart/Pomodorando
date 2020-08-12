@@ -64,7 +64,7 @@ h3 {
     justify-content: center;
 }
 
-#contador {
+#cronometro {
     display: block;
     /* position: absolute; */
     color: var(--destaque);
@@ -87,7 +87,7 @@ h3 {
     position: absolute;
     background-color: var(--destaque);
     height: 10px;
-    width: 30%;
+    width: 0%;
     border-radius: 7px;
 }
 
@@ -154,7 +154,6 @@ button:hover>#play {
 /* Atividades */
 
 #atividades {
-    /* background-color: antiquewhite; */
     grid-row: 2;
     overflow: scroll;
     overflow-x: hidden;
@@ -227,7 +226,6 @@ button:hover>#play {
 }
 
 #menu {
-    /* background-color: aqua; */
     grid-row: 3;
     position: relative;
     display: flex;
@@ -253,14 +251,20 @@ button:hover>#play {
     top: -10px
 }
 
+#botaoAdicionar img {
+    width: 50px;
+}
+
+#botaoAdicionar img:hover {
+    width: 55px;
+}
+
 #botaoFeito {
     right: 49px;
     bottom: 20px;
 }
 
-#menu img {
-    width: 50px;
-}
+
 
 .modal {
     display: flex;
@@ -363,6 +367,7 @@ input:focus {
 #adicionar {
     color: var(--destaque);
 }
+
 
 .hidden {
     display: none;
